@@ -38,7 +38,7 @@
 .searchBar {
   width: 100vw;
   height: 50px;
-  background-color: ghostwhite;
+  background-color: #f3f3f3;
   display: flex;
   align-items: center;
   justify-content: center;

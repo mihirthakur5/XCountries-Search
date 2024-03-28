@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styles from "./App.module.css";
+import "./App.css";
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-      <div className={styles.searchBar}>
+      <div className="searchBar">
         <input
           type="text"
           placeholder="Search for countries..."
@@ -33,16 +33,16 @@ function App() {
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
-      <div className={styles.container}>
+      <div className="container">
         {filteredCountries.map((country) => {
           return (
-            <div key={country.cca3} className={styles.countryCard}>
+            <div key={country.cca3} className="countryCard">
               <img
                 src={country.flags.png}
                 alt={`Flag of ${country.name.common}`}
-                className={styles.imageStyle}
+                className="imageStyle"
               />
-              <p className={styles.textStyle}>{country.name.common}</p>
+              <p className="textStyle">{country.name.common}</p>
             </div>
           );
         })}
